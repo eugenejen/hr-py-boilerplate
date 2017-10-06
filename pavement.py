@@ -22,13 +22,13 @@ def pylint():
 
 
 @task
-def nosetests():
+def test():
     nose_options = ''
     sh('nosetests %s' % nose_options, cwd=__path__)
 
 
 @task
-@needs('nosetests')
+@needs('test')
 @needs('pylint')
 @needs('pep8')
 def build():
