@@ -24,7 +24,7 @@ def pylint():
 @task
 def nosetests():
     nose_options = ''
-    sh('nosetests %s' % nose_options, cwd=__path__.parent)
+    sh('nosetests %s' % nose_options, cwd=__path__)
 
 
 @task
